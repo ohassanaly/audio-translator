@@ -1,0 +1,21 @@
+[project]
+name = "audio-translator"
+version = "0.1.0"
+description = "building voice AI translator with Pipecat"
+requires-python = ">=3.10"
+dependencies = [
+    "pipecat-ai[daily,webrtc,websocket,silero,cartesia,deepgram,openai,tracing,runner]>=0.0.105",
+    "pipecatcloud>=0.2.20",
+    "opentelemetry-exporter-otlp-proto-http",
+]
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.404,<2",
+    "ruff>=0.12.11,<1",
+]
+
+[tool.ruff]
+line-length = 100
+[tool.ruff.lint]
+select = ["I"]
